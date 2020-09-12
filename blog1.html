@@ -8,7 +8,7 @@
   
 <body>
   
-<h1>
+<h1 id="top">
   CIT480 <br>
   Blog 1 
 </h1>
@@ -24,39 +24,42 @@
   
   
   
-  
-<!-- <h3> Basics of HTML </h3>
 
-<p>HTML, also known as Hypertext Markup Language, is the essential structure for a standard webpage. Combined with other programming languages such as, JavaScript and Cascading Style Sheets (CSS), one can create webpages available on the World Wide Web. These langauges allow the contents of a webpage to be presented as clearly and aesthetically at the creator's discretion. 
-</p>
-  
-<p>From a basic point of view, the structure of a webpage relies heavily on HTML. On the other hand, CSS controls a page's layout and design, while JavaScript works with how it should behave. Together, they are able to create a cohesive and aesthetic webpage.
-</p>
-  
-<p>Through HTML, creators are able to cohesively label and identify parts of their page throught the use of tags. Tags allow for a better organized format when tracking content. Through this, a web developer and/or a UX designer is better able to apply attributes and formats to a page's content, which can then ultimately conclude into an average website. 
-</p>
+<h3 id="one"> Creating Links with HTML </h3>
 
-<img src="https://cdn.glitch.com/18230d55-eb25-4a2e-97d2-1aab758c61c1%2Fdisneywebsite.png?v=1599201611924" alt="HTML" width="500" height="300" class="center">  
-<p>Any user with access to a webpage can "inspect" what makes up a page, as seen above, easily by simply doing the following: <br>
-<b>Right Click on any Website of Choice &gt; Click "Inspect [Element]" </b><br>
-Once this the screen is similar to the photo above, drag the cursor around on the webpage and see how different elements are highlighted to correspond with their respective code.
+<p>Within a standard web page, there are several reference points that contain anchors &lt;a&gt;, which are links to other websites and/or pages. Almost all websites today serve more than one purpose, which means they may contain many pages that link to certain functions and information. In this blog post, I will discuss how to create links to both external and internal sources with HTML. 
+</p>
+ 
+<h4 id="two">
+  Links to External and Internal Sources
+  </h4>  
+<p>As stated before, we utlize the anchor tag &lt;a&gt; to create links within a page. To do so, we nest the word or image we would like to serve as a link within an anchor tag. After, an href attribute is added to the opening anchor tag. The href attribute specifies the address where the link should go once clicked. 
 </p>
   
-<p>A standard webpage consists of two things: a header and a body. First and foremost, a doctype must be declared to state what version of HTML will be reflected in the content of the code. This is important as certain versions will provide access to different elements and attributes. The header is also where a link to external files like a CSS and/or JavaScript file can be declared to apply to the rest of the content within the webpage. Within the header, the meta and title should be declared to set the encoding and provide a title for the document, respectively. On the other hand, the body is where the content of the page will be. Here visual elements such as, footer, header, paragraph, sidebars, etc, can be found. 
+
+<img src="https://cdn.glitch.com/18230d55-eb25-4a2e-97d2-1aab758c61c1%2Ftargetatt.png?v=1599861528080" alt="Target Attributes" width="1000" height="350">  
+<p>Another optional attribute that can be added to the anchor tag is a target. Specifying a target allows the link to be opened under several options. The chart above, states the common target attributes for an anchor tag and their purposes. So with the following example: <a href="https://www.csun.edu/" title="CSUN Webpage" target="_blank">CSUN</a><br>
+The link opens in another tab. And this is done so with the following:
+  <pre>&lt;a href="https://www.csun.edu/" title="CSUN Webpage" target="_blank"&gt;CSUN&lt;/a&gt;</pre>
+Another attribute to notice is &quot;title&quot;. This global attribute is commonly used to aid with page accessibility. With a title attribute, these can be read and interpreted by assistive devices, search engines, etc. 
+</p>
+  
+<p>To link to an internal webpage, the same steps as linking to an external website are taken. The only difference is that, rather than a web address, the href would be directed to another html file. 
 </p>  
   
-<p>Getting started is easy. There are many resources out there to start tinkering around with HTML. Popular code editors include: 
-  <ul>
-    <li>Aptana</li>
-    <li>Atom</li>
-    <li>Brackets</li>
-    <li>NotePad/NotePad++</li>
-    <li>Sublime</li>
-    <li>VS Code</li>
-  </ul>
-... and many more.
-</p> -->
+
+<h4 id="three">
+  By Region
+  </h4>  
+<p>Another way to utlize the anchor tag, is by linking to different page regions. This can be commonly found in pages that have navigation buttons located throughout their website. Most common is the &quot;Back to the Top&quot; button that may pop up all the way at a bottom of a page or as you scroll down a website. This can commonly be found on e-commerce websites, long forums, etc. 
+</p>  
   
+<p>At the bottom of this page, there is a link that will navigate to the top of this page. To accomplish this with HTML, markers are used throughout the page to signify locational references. For this page, I declared the top to be by the main header of the page. The following is how it is presented: <br>
+  <pre>&lt;a href="#top" title="Navigate Back to the Top of the Page"&gt;Back to the Top&lt;/a&gt;</pre>
+Should you want to specifically link to another internal source at a specific region, the href would have the name of the file followed directly by a  # with the location identifier. 
+  </p> 
+
+<a href="#top" title="Back to the Top of the Page">Back to the Top</a>  
   
 <br>
 
