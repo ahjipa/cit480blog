@@ -1,0 +1,244 @@
+ <!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Blog 5</title>
+<style>
+html, body {
+	background: #663399; /* Beccapurple */
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: rgb(107, 107, 132);
+}
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 100%;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 2.5% 2.5% 0;
+	background: white;
+	line-height: 1.8;
+}
+h1 {
+	font: 1.6em Verdana, Geneva, sans-serif;
+	margin-bottom: .4em;
+	color: rgb(83, 104, 138);
+}
+h2 {
+	font: 3.2em Georgia, "Times New Roman", Times, serif;
+	margin-bottom: .2em;
+}
+h3 {
+	font-size: 1.2em;
+}
+p {
+	margin-bottom: 1em;
+}
+a {
+	color: rgb(184, 126, 84);
+}
+a:hover {
+	color: rgb(120, 97, 55);
+}
+pre {
+	font-size: 1.4em;
+	color: white;
+	padding: .5em 1em;
+	border-left: 1em solid #A68048;
+	background: #666;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+	width: 80%;
+}
+pre.wrong {
+	border-left-color: red;
+}
+pre.correct {
+	border-left-color: green;
+}
+dt {
+	font-style: italic;
+	font-size:1.2em;
+}
+dd {
+	margin-bottom: 1.4em;
+}
+table {
+	margin-top: 1em;
+}
+caption {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 1em;
+	text-align: left;
+}
+td, th {
+	padding: 10px;
+}
+.center {
+	text-align: center;
+}
+header h2 {
+	padding-bottom: .2em;
+	border-bottom: 1px solid gray;
+}
+aside {
+	padding: 1em;
+	background:rgb(83, 104, 138);
+	color: white;
+	margin-bottom: 1em;
+}
+aside h4 {
+	color: white;
+}
+footer {
+	border-top: 1px solid gray;
+	text-align: center;
+	font-size: .8em;
+	line-height: 4em;
+	margin-top: 1em;
+}
+blockquote {
+	font-style: italic;
+}
+.flowRight {
+	float: right;
+	margin-left: 10px;
+}
+.flowLeft {
+	float: left;
+	margin-right: 10px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> <!-- pulls icons from source -->
+
+<!--<link href="/_css/styles.css" rel="stylesheet" type="text/css">--></head>
+  
+<body>
+  
+<h1 id="top">
+  CIT480 <br>
+  Blog 5
+</h1>
+  
+
+<a href="intro.html" title="Angela's Home Page">Home</a><br><br>
+  
+<p>Blog 5: Due Date | October 9, 2020 <br>
+  <a href="blog4.html" title="Last Week's Blog">
+  Previous Week
+  </a>
+</p>
+  
+  
+  
+
+<h3 id="one"> Online Resume </h3>
+
+<p>his semester, I am taking CIT384/L alongside the rest of my courses. CIT384 is a Web Developing and Hosting class taught by Professor Marin. In the class we explore internet infrastructure and networking technologies. Topics we cover include: system and software architectures for web applications and e-business systems, principles of website design, advances in web-engineering technologies, principles of web-based transaction processing, XML and the associated technologies, web service technology, security and privacy issues, and so on. In this week's blog, I will discuss our continuous assignment built around creating our own personal online resume page for CIT384.  
+</p>
+ 
+<h4 id="two">
+    The Lab
+  </h4>  
+<p>For these next two weeks in CIT384, we are tasked with building up an online resume utilizing HTML and CSS. From here we should be able to acquire the necessary tools to go forth with the second project for this class. Given that this particule lab is something I can use as leverage for I took the time to brainstorm possible layouts with the knowledge I already knew about basic blocking and possible techniques I can take from simple Google searches. 
+</p>
+  
+  
+<h4 id="three">
+  Dividing Sections
+  </h4>  
+  
+<p>To start off, I decided to populate the the page with basic resume information and took the time to really personalize it. Luckily, I have been regularly updating and attempting to improve on the basic design of my actual resume that I use to apply for internships and jobs, and so it was easy to fill in the basic information required. 
+</p> 
+  
+  <p>The sections were divided into the following: 
+    <ul>
+      <li>Header: Photo, Name, Position</li>
+      <li>Education: Basic Information on Education ie. Degree, Expected Graduation</li>
+      <li>Professional Experiences: Relevant work experiences that can also include internships and volunteer history.</li>
+      <li>Footer: Contact Information, Copyright Mark</li>
+  </ul>
+</p>  
+  
+  <img src="https://cdn.glitch.com/18230d55-eb25-4a2e-97d2-1aab758c61c1%2FResumeSkeleton.png?v=1602310961392" title="Resume Skeleton" height="50%" width="50%" class="center">
+  
+  <p>Prior to customizing the HTML to fit the content and layout I wanted, the basic layout was set up as seen above.  
+  </p>  
+    
+    
+<p>After filling in the needed information, I started playing around with the theme and overall look of the page. I did some font mixing and added in some neutral tones in order to keep it professional. Using Google Fonts, I imported PT Serif and Nunito Sans into my page for the Headers and default font by doing the following: 
+  <pre>h1, h2, h3, h4, h5, h6, p {
+	font-family: 'PT Serif', serif;
+  margin: 0;
+	padding: 0;
+}</pre>
+  <pre>body {
+  font-family: 'Nunito Sans', sans-serif;
+  width: 80%; 
+	margin-right: auto; 
+	margin-left: auto; 
+	padding: 2.5% 2.5% 0;
+	background: white; /* Sets the body background to white. */
+	line-height: 1.8; /* Declares spacing vertically */
+}</pre>
+  <pre>&lt;link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet"&gt; <!-- heading font -->
+  
+&lt;link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet"&gt; <!-- default font --></pre>
+  The first two blocks were put into my CSS style sheet, while the last block utilizing "link" was included in the header of my HTML page. 
+</p>  
+  
+<p>
+   Other changes I made included changing my image shape to be rounded instead of square and resizing the jpeg to fit within the page; I achieved so with the following code: 
+  <pre>img {
+  border-radius: 50%; /* gives images rounded shape */
+  max-width: 25%;
+  max-height: 25%;
+}</pre>
+</p>
+
+<p>
+  Something I had a fun time learning about was utilizing icons to link to certain pages or applications. For my page, I included icons to be redirected to my email information and LinkedIn Page. <br>
+  <a href="mailto:angela.miranda.446@my.csun.com" title="email" class="icon"><i class="far fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/angelamiranda99/" title="Angela's linkedin page" target="_blank" class="icon"><i class="fab fa-linkedin"></i></a>
+  <br>
+  If you click the icons above, you will be directed to their intended addresses. This can be done by doing the following:
+  <pre>&lt;script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"&gt;&lt;/script&gt; <!-- pulls icons from source -->
+</pre>
+<pre>&lt;a href="mailto:angela.miranda.446@my.csun.com" title="email" class="icon"&gt;&lt;i class="far fa-envelope"&gt;&lt;/i&gt;&lt;/a&gt;
+
+&lt;a href="https://www.linkedin.com/in/angelamiranda99/" title="Angela's linkedin page" target="_blank" class="icon"&gt;&lt;i class="fab fa-linkedin"&gt;&lt;/i&gt;&lt;/a&gt;</pre>
+</p>
+
+<p>
+  Click <a href="https://ahjipa.github.io/resumedraft1/index.html" title="First Draft of Angela's HTML Resume" target="_blank">here</a> to see the first draft!
+</p>
+  
+
+<a href="#top" title="Back to the Top of the Page">Back to the Top</a>  
+  
+<br>
+
+  <footer role="Content Info">
+    <b>&copy; Angela Miranda</b>
+  </footer>
+  
+  
+</body>
+</html>
+ 
