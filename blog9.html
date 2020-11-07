@@ -1,0 +1,245 @@
+ <!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Blog 9</title>
+<style>
+html, body {
+	background: #663399; /* Beccapurple */
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: rgb(107, 107, 132);
+}
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 100%;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 2.5% 2.5% 0;
+	background: white;
+	line-height: 1.8;
+}
+h1 {
+	font: 1.6em Verdana, Geneva, sans-serif;
+	margin-bottom: .4em;
+	color: rgb(83, 104, 138);
+}
+h2 {
+	font: 3.2em Georgia, "Times New Roman", Times, serif;
+	margin-bottom: .2em;
+}
+h3 {
+	font-size: 1.2em;
+}
+p {
+	margin-bottom: 1em;
+}
+a {
+	color: rgb(184, 126, 84);
+}
+a:hover {
+	color: rgb(120, 97, 55);
+}
+pre {
+	font-size: 1.4em;
+	color: white;
+	padding: .5em 1em;
+	border-left: 1em solid #A68048;
+	background: #666;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+	width: 80%;
+}
+pre.wrong {
+	border-left-color: red;
+}
+pre.correct {
+	border-left-color: green;
+}
+dt {
+	font-style: italic;
+	font-size:1.2em;
+}
+dd {
+	margin-bottom: 1.4em;
+}
+table {
+	margin-top: 1em;
+}
+caption {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 1em;
+	text-align: left;
+}
+td, th {
+	padding: 10px;
+}
+.center {
+	text-align: center;
+}
+header h2 {
+	padding-bottom: .2em;
+	border-bottom: 1px solid gray;
+}
+aside {
+	padding: 1em;
+	background:rgb(83, 104, 138);
+	color: white;
+	margin-bottom: 1em;
+}
+aside h4 {
+	color: white;
+}
+footer {
+	border-top: 1px solid gray;
+	text-align: center;
+	font-size: .8em;
+	line-height: 4em;
+	margin-top: 1em;
+}
+blockquote {
+	font-style: italic;
+}
+.flowRight {
+	float: right;
+	margin-left: 10px;
+}
+.flowLeft {
+	float: left;
+	margin-right: 10px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> <!-- pulls icons from source -->
+
+<!--<link href="/_css/styles.css" rel="stylesheet" type="text/css">--></head>
+  
+<body>
+  
+<h1 id="top">
+  CIT480 <br>
+  Blog 9
+</h1>
+  
+
+<a href="intro.html" title="Angela's Home Page">Home</a><br><br>
+  
+<p>Blog 9: Due Date | November 6, 2020 <br>
+  <a href="blog8.html" title="Last Week's Blog">
+  Previous Week
+  </a>
+</p>
+  
+  
+  
+
+<h3 id="one"> GigaPet KnockOff </h3>
+  
+<p>This semester, I am taking CIT384/L alongside the rest of my courses. CIT384 is a Web Developing and Hosting class taught by Professor Marin. In the class we explore internet infrastructure and networking technologies. Topics we cover include: system and software architectures for web applications and e-business systems, principles of website design, advances in web-engineering technologies, principles of web-based transaction processing, XML and the associated technologies, web service technology, security and privacy issues, and so on. In this week's blog, I will discuss our second individual project for CIT384 where we add actions and functions to our GigaPet.  
+</p>
+  
+<p>In last week's lecture, we were assigned Project 2 where we were to make our own GigaPet in the span of one week. This is our first assignment/lecture in this class in which we utilize JavaScript. 
+</p>
+  
+<p>In <a href="blog0.html" title="Blog 0">Blog 0</a>, I briefly discussed the basics of HTML and how it can be utilized to work closely together with CSS and JavaScript to create an ideal, well put-together webpage. 
+  <blockquote>From a basic point of view, the structure of a webpage relies heavily on HTML. On the other hand, CSS controls a page's layout and design, while JavaScript works with how it should behave. Together, they are able to create a cohesive and aesthetic webpage. 
+  </blockquote>
+</p>
+  
+  
+ 
+<h4 id="two">Steps I Took</h4>  
+  
+<p>For this assignment, I had a total of three files: HTML for the actual webpage, CSS for the layout of the HTML webpage, and JavaScript which contained the functions that regarded any interaction done on the page. 
+</p>
+  
+<p>For out GigaPet, we were free to choose any icon. To add you icon, you can add your own image or make other media that include more animations. I added a simple image with a clear background to my HTML page by doing the following: 
+  <pre>
+    &lt;section class="pet-image-container"&gt;
+         &lt;!-- Replace pet image with your own pet image --&gt;
+         &lt;img class="pet-image" src="https://cdn.glitch.com/734d6424-025d-4912-805b-bc1ef994f0a1%2Fkirby.png?v=1604621243925"&gt;
+    &lt;/section&gt;</pre>
+</p>
+
+
+<h5>JavaScript Functions</h5>
+  
+  
+<p>Moving on to JavaScript, create and utilize functions in order to add actions/interactions to the webpage. 
+</p>  
+
+<p>After choosing an icon, create buttons to interact with. To do so, do the following:
+  <pre>$(function() { // Makes sure that your function is called once all the DOM elements of the page are ready to be used.
+    
+    // Called function to update the name, happiness, and weight of our pet in our HTML
+    checkAndUpdatePetInfoInHtml();
+  
+    // When each button is clicked, it will "call" function for that button (functions are below)
+    $('.treat-button').click(clickedTreatButton);
+    $('.play-button').click(clickedPlayButton);
+    $('.exercise-button').click(clickedExerciseButton);
+    $('.hydration-button').click(clickedHydrationButton); 
+})</pre>
+</p>
+
+<p>Each button can be customized to your liking. For this particular project, I had four basic buttons that had a basic emulation of standard Tomodatchi actions. After establishing buttons, add respective functions and arguments to each. 
+</p>
+
+<p>For this particular project, the goal was to create a basic counter that increased and decreased after interacting with the buttons. And now that the buttons have been established, declare the var statements in order to initialize them in later functions. 
+  <pre>var pet_info = {
+      name:"Kirby", 
+      weight:"23", 
+      happiness:"98", 
+      hydration:"49"};</pre>
+</p>
+
+<p>Values can be preset as seen above. To do basic increments, the following is a possible option: 
+  <pre>function clickedTreatButton() {
+      // Increase pet happiness
+        pet_info.happiness++;
+      // Increase pet weight
+        pet_info.weight++;
+      checkAndUpdatePetInfoInHtml();
+      alert("Yum!!");
+}</pre>
+</p>
+
+  <pre class="wrong">Note: If your function, as seen above, is not reading as an integer, simply remove the quotation marks.</pre>
+
+<p>From here, more customizations can be done to your GigaPet. Animations, music, and other conditionals can be added for further effects. I, for one, added small audio clips of Kirby to match my buttons. To accomplish so, I included a &quot;var Audio&quot; (where the audio can be found) followed by &quot;audio.play();&quot;.
+</p>
+
+<h2 align="center"><p>Click <a href="https://ahjipa.github.io/gigakirby/" target="_blank" title="GigaPet Page">HERE</a> to see!
+</p></h2>
+
+
+
+  
+<a href="#top" title="Back to the Top of the Page">Back to the Top</a>  
+  
+<br>
+
+  
+  <footer role="Content Info">
+    <b>&copy; Angela Miranda</b>
+  </footer>
+  
+  
+</body>
+</html>
+ 
