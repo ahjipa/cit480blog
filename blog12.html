@@ -148,80 +148,34 @@ blockquote {
   
   
 
-<h3 id="one"> Docker Commands </h3>
+<h3 id="one"> SecurityOnion and tcpreplay </h3>
   
-<p>In previous and current CIT classes, I have had the opportunity to have labs that utilize Terminal. In this week's blog, I will list common and useful Terminal commands. 
+<p>In a recent lab, I utilized Security Onion to determine and test how tcpreplay works and how it can be extremely dangerous when pushing dangerous/corrupted .pcap files. 
 </p>
   
+  <p>
+    Tcpreplay will replay a network trace and launch it on the network as if it was coming onto the network for the first time. The basic operation of tcpreplay is to resend all packets from the input files at the speed at which they were recorded, or a specified data rate, up to as fast as the hardware is capable. 
+  </p>
   
- 
-<section>
-      <h3>Commands</h3>
-      <dl>
-        <dt>cd</dt>
-        <dd> Changes the directory of the command line path.</dd>
-        
-        <dt>ls</dt>
-        <dd>BLists the contents of a directory.</dd>
-        
-        <dt>open</dt>
-        <dd>Opens specified file.</dd>
-        
-        <dt>cp</dt>
-        <dd>Copies file into another directory.</dd>
-        
-        <dt>mv</dt>
-        <dd>Moves/renames file into a specified directory.</dd>
-        
-        <dt>mkdir</dt>
-        <dd>Creates a directory.</dd>
-        
-        <dt>rmdir</dt>
-        <dd>Removes an empty directory.</dd>
-        
-        <dt>rm -R</dt>
-        <dd>Removes nested directories.</dd>
-        
-        <dt>sudo</dt>
-        <dd>IExecutes commands with superuser privileges.</dd>
-        
-        <dt>top</dt>
-        <dd>Lists actively running computer processes.</dd>
-        
-        <dt>q</dt>
-        <dd>Quits subscreen and returns to Terminal. Commonly used on man page.</dd>
-        
-        <dt>clear</dt>
-        <dd>Clears the Terminal screen of all current commands on the window.</dd>
-        
-        <dt>whatis</dt>
-        <dd>Retrieve description for a command.</dd>
-        
-        <dt>man</dt>
-        <dd>Pulls up manual page for a command.</dd>
-        
-        <dt>exit</dt>
-        <dd>Closes currently open Terminal session.</dd>
-        
-        <dt>touch</dt>
-        <dd>Creates a new file without any extension.</dd>
-        
-        <dt>chmod 755 &lt;file&gt;</dt>
-        <dd>Changes the permission of a file to 755.</dd>
-        
-        <dt>chown &lt;user&gt;:&lt;group&gt; &lt;file&gt; </dt>
-        <dd>Changes the ownership of a file to user and group.</dd>
-        
-        <dt>kill PID</dt>
-        <dd>Quits process with ID &lt;PID&gt;.</dd>
-        
-        <dt>ping &lt;host&gt;</dt>
-        <dd>Pings host and displays connectivity status.</dd>
-        
-        
-      </dl>
-</section>
   
+ <p>
+   I first had to set up SecurityOnion and its configurations. After installing the .iso file, I went in to its terminal to update my installation by doing the following:
+   <pre>sudo soup</pre>
+  </p>
+  
+  <p>
+    Once set up is complete, the interface should look like the following: <br>
+    <img src="https://cdn.glitch.com/18230d55-eb25-4a2e-97d2-1aab758c61c1%2Fonion.png?v=1608080998262" height="764" length="980">
+  </p>
+  
+  <p>
+    For the lab, I utilized SGuil to examine the log events of the .pcap files that I would play and Wireshark to define more information about the attack and attacker. Prior to executing the tcpreplay commands, <b>make sure to disable connection to the internet.</b> The following are atttacks that I have examined.
+    <pre>sudo tcpreplay –i enp0s3 –M10 /opt/samples/ip-fragment-attack.pcap</pre>
+    <pre>sudo tcpreplay –i enp0s3 –M10 /opt/samples/markofu/honeynet_suspicious-time.pcap</pre>
+    <pre>sudo tcpreplay –ienp0s3 –M10 /opt/samples/bredolab-sample.pcap</pre>
+  and finally
+    <pre>sudo tcpreplay –ienp0s3 –M10 /opt/samples/zeus-sample-3.pcap</pre>
+  </p>
   
   
 <a href="#top" title="Back to the Top of the Page">Back to the Top</a>  
