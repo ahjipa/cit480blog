@@ -1,0 +1,192 @@
+ <!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Blog 16</title>
+<style>
+html, body {
+	background: #663399; /* Beccapurple */
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: rgb(107, 107, 132);
+}
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 100%;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 2.5% 2.5% 0;
+	background: white;
+	line-height: 1.8;
+}
+h1 {
+	font: 1.6em Verdana, Geneva, sans-serif;
+	margin-bottom: .4em;
+	color: rgb(83, 104, 138);
+}
+h2 {
+	font: 3.2em Georgia, "Times New Roman", Times, serif;
+	margin-bottom: .2em;
+}
+h3 {
+	font-size: 1.2em;
+}
+p {
+	margin-bottom: 1em;
+}
+a {
+	color: rgb(184, 126, 84);
+}
+a:hover {
+	color: rgb(120, 97, 55);
+}
+pre {
+	font-size: 1.4em;
+	color: white;
+	padding: .5em 1em;
+	border-left: 1em solid #A68048;
+	background: #666;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+	width: 80%;
+}
+pre.wrong {
+	border-left-color: red;
+}
+pre.correct {
+	border-left-color: green;
+}
+dt {
+	font-style: italic;
+	font-size:1.2em;
+}
+dd {
+	margin-bottom: 1.4em;
+}
+table {
+	margin-top: 1em;
+}
+caption {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 1em;
+	text-align: left;
+}
+td, th {
+	padding: 10px;
+}
+.center {
+	text-align: center;
+}
+header h2 {
+	padding-bottom: .2em;
+	border-bottom: 1px solid gray;
+}
+aside {
+	padding: 1em;
+	background:rgb(83, 104, 138);
+	color: white;
+	margin-bottom: 1em;
+}
+aside h4 {
+	color: white;
+}
+footer {
+	border-top: 1px solid gray;
+	text-align: center;
+	font-size: .8em;
+	line-height: 4em;
+	margin-top: 1em;
+}
+blockquote {
+	font-style: italic;
+}
+.flowRight {
+	float: right;
+	margin-left: 10px;
+}
+.flowLeft {
+	float: left;
+	margin-right: 10px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> <!-- pulls icons from source -->
+
+<!--<link href="/_css/styles.css" rel="stylesheet" type="text/css">--></head>
+  
+<body>
+  
+<h1 id="top">
+  CIT481 <br>
+  Blog 16
+</h1>
+  
+
+<a href="intro.html" title="Angela's Home Page">Home</a><br><br>
+  
+<p>Blog 16: Due Date | March 12, 2021 <br>
+  <a href="blog14.html" title="Last Week's Blog">
+  Previous
+  </a>
+</p>
+  
+  
+  
+
+<h3 id="one"> Project 0: Domain </h3>
+  
+<p>This semester marks the Class of 2021's culminating year. And for us CIT students, we are currently in the beginning stages of putting together our Senior Design project. For this first blog of the new semester, I will be going over steps we have taken and will take to bring our ideas to tangible deliverables. 
+</p>
+  
+  <p>
+    Tcpreplay will replay a network trace and launch it on the network as if it was coming onto the network for the first time. The basic operation of tcpreplay is to resend all packets from the input files at the speed at which they were recorded, or a specified data rate, up to as fast as the hardware is capable. 
+  </p>
+  
+  
+ <p>
+   I first had to set up SecurityOnion and its configurations. After installing the .iso file, I went in to its terminal to update my installation by doing the following:
+   <pre>sudo soup</pre>
+  </p>
+  
+  <p>
+    Once set up is complete, the interface should look like the following: <br>
+    <img src="https://cdn.glitch.com/18230d55-eb25-4a2e-97d2-1aab758c61c1%2Fonion.png?v=1608080998262" height="764" length="980">
+  </p>
+  
+  <p>
+    For the lab, I utilized SGuil to examine the log events of the .pcap files that I would play and Wireshark to define more information about the attack and attacker. Prior to executing the tcpreplay commands, <b>make sure to disable connection to the internet.</b> The following are atttacks that I have examined.
+    <pre>sudo tcpreplay –i enp0s3 –M10 /opt/samples/ip-fragment-attack.pcap</pre>
+    <pre>sudo tcpreplay –i enp0s3 –M10 /opt/samples/markofu/honeynet_suspicious-time.pcap</pre>
+    <pre>sudo tcpreplay –ienp0s3 –M10 /opt/samples/bredolab-sample.pcap</pre>
+  and finally
+    <pre>sudo tcpreplay –ienp0s3 –M10 /opt/samples/zeus-sample-3.pcap</pre>
+  </p>
+  
+  
+<a href="#top" title="Back to the Top of the Page">Back to the Top</a>  
+
+
+  
+  <footer role="Content Info">
+    <b>&copy; Angela Miranda</b>
+  </footer>
+  
+  
+</body>
+</html>
+ 
